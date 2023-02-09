@@ -51,13 +51,13 @@ export default function Home() {
       <main className="pb-8 pt-36 -mt-24 bg-gray-900 lg:overflow-hidden homepage-gradient">
         <div className="mx-auto max-w-7xl lg:px-16">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:py-24">
-              <div>
+            <div className="sm:mx-auto lg:mx-0 max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:text-left lg:px-0 lg:flex lg:py-24">
+              <div className="flex flex-col align-middle justify-start">
                 <h1 className="text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:text-6xl">
                   <span className="block">Welcome to</span>
                   <span className="block pb-3 sm:pb-5 bg-clip-text text-transparent blueGradientUnderlineText">my website!</span>
                 </h1>
-                <p className="text-base text-gray-200 sm:text-xl lg:text-lg xl:text-xl">A place where I showcase my projects and makings. I don&apos;t know what to write here but I just need a long text to test out the layout so here we go I guess lol. This layout won&apos;t get itself to work ffs</p>
+                <p className="text-base text-gray-200 sm:text-xl lg:text-lg xl:text-xl">A place where I showcase my projects!</p>
               </div>
             </div>
             <div className="flex mt-12 mb-16 lg:py-12 lg:m-0 lg:justify-end">

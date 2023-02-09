@@ -606,9 +606,6 @@ html {
 .max-w-md {
   max-width: 28rem;
 }
-.flex-none {
-  flex: none;
-}
 .flex-grow {
   flex-grow: 1;
 }
@@ -635,6 +632,9 @@ html {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-items-start {
+  justify-items: start;
 }
 .scroll-smooth {
   scroll-behavior: smooth;
@@ -1051,12 +1051,6 @@ html {
 
   .lg\:gap-8 {
     gap: 2rem;
-  }
-
-  .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .lg\:overflow-hidden {
