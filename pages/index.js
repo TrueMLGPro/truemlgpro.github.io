@@ -5,7 +5,7 @@ import { Canvas, AcesFilmicToneMapping } from "@react-three/fiber";
 import { OrbitControls, Stage, PerspectiveCamera, Preload } from '@react-three/drei';
 import Navbar from '../components/Navbar'
 import LoadingSpinner from '../components/LoadingSpinner';
-import CardView from '../components/Cardview';
+import CardView from '../components/CardView';
 import HeadingText1 from '../components/HeadingText1';
 require('default-passive-events');
 
