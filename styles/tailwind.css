@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html {
+    height: 100%
+  }
+
+  .code {
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  .blueGradientUnderlineText {
+    display: inline;
+    padding-bottom: 0.2em;
+    background-image: linear-gradient(90deg, rgb(0, 204, 255), rgb(53, 120, 220));
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 0% 0px;
+    animation: textFillSlideLToR 1500ms ease-in-out 1 normal forwards;
+    animation-delay: 250ms;
+  }
+
+  @keyframes textFillSlideLToR {
+    0% {
+      background-size: 0% 64px;
+    }
+
+    100% {
+      background-size: 100% 64px;
+    }
+  }
+
+  .purpleGradientUnderlineText {
+    display: inline;
+    background-image: linear-gradient(90deg, rgb(150, 67, 219), rgb(235, 57, 206));
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 3px;
+    transition: background-size 10000ms ease-in-out;
+  }
+
+  .purpleGradientUnderlineText:hover {
+    background-size: 100% 3px;
+  }
+
+  .homepage-gradient {
+    background-image: linear-gradient(25deg, hsl(221deg 39% 11%) 0%, hsl(221deg 39% 11%) 10%, hsl(221deg 39% 11%) 20%, hsl(221deg 39% 11%) 30%, hsl(221deg 39% 11%) 40%, hsl(221deg 39% 11%) 50%, hsl(258deg 35% 22%) 60%, hsl(306deg 47% 28%) 70%, hsl(329deg 76% 37%) 80%, hsl(346deg 82% 47%) 90%, hsl(18deg 99% 48%) 100%);
+  }
+
+  @keyframes homepage-gradient-hue-shift {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  @keyframes spin-pulse {
+    50% {
+      opacity: .5;
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-homepage-gradient-hue-shift {
+    animation: homepage-gradient-hue-shift 10s infinite;
+  }
+
+  .animate-spin-pulse {
+    animation: spin-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(17 24 39);
+    opacity: 0.9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2c3856;
+    border-radius: 100vh;
+    border: 3px solid rgb(20 27 45);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #324062;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0);
+  }
+}
