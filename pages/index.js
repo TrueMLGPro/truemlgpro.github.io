@@ -101,7 +101,7 @@ export default function Home() {
                 langColor="bg-sky-600"
               />
               <CardView
-                title="Cat-of-The-Minute"
+                title="Cat of The Minute"
                 desc="A website which displays a new cat picture or GIF every 60 seconds"
                 link="https://github.com/TrueMLGPro/Cat-of-The-Minute"
                 language="JavaScript"
