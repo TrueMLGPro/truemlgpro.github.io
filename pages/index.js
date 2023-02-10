@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <div className='m-0 p-0 bg-gray-900 opacity-90'>
       <Head>
-        <title>TMP Apps | Home</title>
+        <title>TrueMLGPro | Home</title>
         <meta name="description" content="A website featuring all of my projects and skills" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -47,22 +47,21 @@ export default function Home() {
         TrueMLGPro
       </Navbar>
 
-      {/* I just needed to have a padding-bottom instead of a margin-bottom AAAAAAAAA */}
       <main className="pb-8 pt-36 -mt-24 bg-gray-900 lg:overflow-hidden homepage-gradient">
         <div className="mx-auto max-w-7xl lg:px-16">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-            <div className="sm:mx-auto lg:mx-0 max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:text-left lg:px-0 lg:flex lg:py-24">
+            <div className="max-w-md xsm:mx-auto lg:mx-0 xsm:max-w-2xl xsm:px-6 xsm:text-center lg:text-left lg:px-0 lg:flex lg:py-24">
               <div className="flex flex-col align-middle justify-start">
-                <h1 className="text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:text-6xl">
+                <h1 className="text-white tracking-tight font-extrabold xsm:mt-5 xsm:text-5xl md:text-6xl">
                   <span className="block">Welcome to</span>
-                  <span className="block pb-3 sm:pb-5 bg-clip-text text-transparent blueGradientUnderlineText">my website!</span>
+                  <span className="block xsm:pb-5 bg-clip-text text-transparent blueGradientUnderlineText">my website!</span>
                 </h1>
-                <p className="text-base text-gray-200 sm:text-xl lg:text-lg xl:text-xl">A place where I showcase my projects!</p>
+                <p className="text-base text-gray-200 xsm:text-lg xl:text-xl">A place where I showcase my projects!</p>
               </div>
             </div>
             <div className="flex mt-12 mb-16 lg:py-12 lg:m-0 lg:justify-end">
-              <div className="flex sm:w-64 sm:h-64 lg:w-96 lg:h-96 lg:max-w-lg sm:mx-auto lg:mx-0 sm:max-w-2xl">
-                <Suspense className="w-full h-full items-center align-middle" fallback={<LoadingSpinner />}> { /* FIXME: ALIGN THE SUSPENSE TO CENTER */ }
+              <div className="flex xsm:w-64 xsm:h-64 lg:w-96 lg:h-96 lg:max-w-lg xsm:mx-auto lg:mx-0">
+                <Suspense className="w-full h-full items-center align-middle" fallback={<LoadingSpinner />}>
                   <Canvas onCreated={state => {state.gl.toneMapping = AcesFilmicToneMapping; state.gl.toneMappingExposure = 2.3}} resize={{debounce: 0}} linear shadows frameloop="demand" dpr={[1, 2]} className="rounded-3xl">
                     <Preload all />
                     <Light />
@@ -77,10 +76,10 @@ export default function Home() {
             </div>
           </div>
           <div className="md:mx-8 lg:mx-0">
-            <HeadingText1 customStyle="sm:text-center sm:mx-8 lg:text-left md:mx-0">
+            <HeadingText1 customStyle="xsm:text-center xsm:mx-8 lg:text-left md:mx-0">
               My Projects
             </HeadingText1>
-            <div className="sm:flex sm:flex-col md:flex-none sm:space-y-8 md:space-y-0 sm:mx-8 md:mx-0 sm:mt-8 md:grid md:grid-cols-2 md:gap-8">
+            <div className="xsm:flex xsm:flex-col md:flex-none xsm:space-y-8 md:space-y-0 xsm:mx-8 md:mx-0 xsm:mt-8 md:grid md:grid-cols-2 md:gap-8">
               <CardView
                 title="Wi-Fi Info"
                 desc="A nice network toolset packed into an Android app!"
