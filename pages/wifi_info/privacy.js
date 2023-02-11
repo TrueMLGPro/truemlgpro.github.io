@@ -17,8 +17,6 @@ const Privacy = () => {
       </Navbar>
 
       <div className='flex-grow pb-8 xsm:m-8 text-white lg:mx-auto lg:px-8 max-w-7xl'>
-        { /* TODO: FORMAT THIS */ }
-        { /* TODO: ADD MORE HEADINGS ACCORDING TO PLAY STORE POLICY */ }
         <HeadingText1>
           Privacy Policy
         </HeadingText1>
