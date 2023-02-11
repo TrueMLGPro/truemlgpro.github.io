@@ -735,6 +735,18 @@ html {
 .uppercase {
   text-transform: uppercase;
 }
+.leading-tight {
+  line-height: 1.25;
+}
+.leading-6 {
+  line-height: 1.5rem;
+}
+.leading-8 {
+  line-height: 2rem;
+}
+.leading-7 {
+  line-height: 1.75rem;
+}
 .tracking-tight {
   letter-spacing: -0.025em;
 }
@@ -841,12 +853,21 @@ html {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  .\32xsm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 360px) {
 
   .xsm\:m-4 {
     margin: 1rem;
+  }
+
+  .xsm\:m-8 {
+    margin: 2rem;
   }
 
   .xsm\:mx-auto {
@@ -920,12 +941,21 @@ html {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .xsm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 480px) {
 
   .sm\:m-4 {
     margin: 1rem;
+  }
+
+  .sm\:m-8 {
+    margin: 2rem;
   }
 
   .sm\:mx-auto {
@@ -1017,6 +1047,11 @@ html {
     margin-right: 0px;
   }
 
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -1073,6 +1108,11 @@ html {
     padding-bottom: 3rem;
   }
 
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .lg\:text-left {
     text-align: left;
   }
@@ -1082,9 +1122,9 @@ html {
     line-height: 2rem;
   }
 
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 

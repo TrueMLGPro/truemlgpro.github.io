@@ -16,15 +16,16 @@ const Privacy = () => {
         Wi-Fi Info Privacy Policy
       </Navbar>
 
-      <div className='flex-grow m-8 pb-8 text-white'>
+      <div className='flex-grow pb-8 xsm:m-8 text-white lg:mx-auto lg:px-8 max-w-7xl'>
         { /* TODO: FORMAT THIS */ }
         { /* TODO: ADD MORE HEADINGS ACCORDING TO PLAY STORE POLICY */ }
         <HeadingText1>
           Privacy Policy
         </HeadingText1>
-        <p className='text-lg'>
+        <p className='text-lg leading-8'>
           TMP Apps built the Wi-Fi Info app as an Open Source app.
-          This Application is provided by TMP Apps at no cost and is intended for use as is.
+          <br/>
+          This Application is provided by TMP Apps at no cost and intended for use as is.
           <br/>
           This page is used to inform visitors regarding our policies with the collection and
           use of Personal Information if anyone decided to use our Application.
@@ -35,26 +36,26 @@ const Privacy = () => {
         <HeadingText2>
           Information Collection and Use
         </HeadingText2>
-        <p className='text-lg'>
-          For this app to function properly, data about network information and identifiers, such as your IP (Internet Protocol) address is being collected,
-          though this data will be retained on your device and is not collected or used by us in any way.
+        <p className='text-lg leading-8'>
+          For this app to function properly, data about network information and identifiers, such as your IP (Internet Protocol) address are being used by the Application,
+          though this data will be retained on your device and not collected or used by us in any way.
         </p>
         <HeadingText2>
           Changes to This Privacy Policy
         </HeadingText2>
-        <p className='text-lg'>
+        <p className='text-lg leading-8'>
           We may update our Privacy Policy from time to time.
           <br/>
           Thus, you are advised to review this page periodically for any changes.
           We will notify you of any changes by posting the new Privacy Policy on this page.
         </p>
-        <p className='text-lg'>
-          This policy is effective as of 2022-09-01
+        <p className='text-lg leading-8'>
+          This policy is effective as of <b>2023-02-11</b>
         </p>
         <HeadingText2>
           Contact Us
         </HeadingText2>
-        <p className='text-lg'>
+        <p className='text-lg leading-8'>
           If you have any questions or suggestions about our
           Privacy Policy, do not hesitate to contact us at <a className='underline text-blue-400 hover:text-blue-600 visited:text-purple-600' href="mailto:contact.tmp.apps@gmail.com">contact.tmp.apps@gmail.com</a>.
         </p>
