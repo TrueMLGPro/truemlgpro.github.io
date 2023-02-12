@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import Link from 'next/link'
-{/* Low performance on mobile devices, might disable blur for mobile devices */}
 
 export default function Navbar({children, icon, border, shouldScrollToTop}) {
   // A workaround for three.js canvas rendering issue
@@ -13,13 +12,13 @@ export default function Navbar({children, icon, border, shouldScrollToTop}) {
         clicked = true;
         console.log("Clicked the link!")
       }, 1000)
-    }, [clicked])
+    }, [clicked]);
   } else {
     console.log("Did not click the link!")
   }
 
   return (
-    <nav className={`${border} ${'flex flex-wrap items-center justify-between p-3 bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-lg sticky top-0 z-50'}`}> { /* backdrop-filter backdrop-blur-lg */ }
+    <nav id="navbar" className={`${border} ${'flex flex-wrap items-center justify-between p-3 bg-gray-900 sm:backdrop-filter sm:backdrop-blur-lg sticky top-0 z-50 transition-all ease-in-out'}`}> { /* backdrop-filter backdrop-blur-lg */ }
       <Link id='root-link' href='/'>
         <span className='inline-flex items-center p-2 mr-4'>
           <svg

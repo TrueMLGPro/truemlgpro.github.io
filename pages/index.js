@@ -1,4 +1,4 @@
-import { useRef, Suspense} from 'react';
+import { useRef, Suspense, useEffect } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic'
 import { Canvas, AcesFilmicToneMapping } from "@react-three/fiber";
@@ -35,6 +35,30 @@ const Light = () => {
 
 export default function Home() {
   const ref = useRef();
+  const spaceChr = String.fromCharCode("&#x20");
+  const navbarOnTopStyle = "bg-opacity-0";
+  const navbarBelowTopStyleExtraSmall = "xsm:bg-opacity-80";
+  const navbarBelowTopStyleSmall = "sm:bg-opacity-50";
+  const navbarBlurFilter = `sm:backdrop-filter${spaceChr}sm:backdrop-blur-lg`;
+  useEffect(() => {
+    let navbarElement = document.getElementById("navbar");
+    window.onscroll = function(event) {
+      "use strict";
+      if (document.body.scrollTop >= 72 || document.documentElement.scrollTop >= 72) {
+        // Scrolled below specified coords (72)
+        navbarElement.classList.remove(navbarOnTopStyle);
+        navbarElement.classList.add(navbarBelowTopStyleExtraSmall);
+        navbarElement.classList.add(navbarBelowTopStyleSmall);
+        navbarElement.classList.add(navbarBlurFilter);
+      } else {
+        // Page Y position is lower than 72 (near top)
+        navbarElement.classList.remove(navbarBelowTopStyleExtraSmall);
+        navbarElement.classList.remove(navbarBelowTopStyleSmall);
+        navbarElement.classList.remove(navbarBlurFilter);
+        navbarElement.classList.add(navbarOnTopStyle);
+      }
+    };
+  });
   return (
     <div className='m-0 p-0 bg-gray-900 opacity-90'>
       <Head>
@@ -51,7 +75,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl lg:px-16">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="max-w-md xsm:mx-auto lg:mx-0 xsm:max-w-2xl xsm:px-6 xsm:text-center lg:text-left lg:px-0 lg:flex lg:py-24">
-              <div className="flex flex-col align-middle justify-start">
+              <div className="flex flex-col justify-start">
                 <h1 className="text-white tracking-tight font-extrabold xsm:mt-5 xsm:text-5xl md:text-6xl">
                   <span className="block">Welcome to</span>
                   <span className="block xsm:pb-5 bg-clip-text text-transparent blueGradientUnderlineText">my website!</span>
