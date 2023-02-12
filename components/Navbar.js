@@ -18,7 +18,7 @@ export default function Navbar({children, icon, border, shouldScrollToTop}) {
   }
 
   return (
-    <nav id="navbar" className={`${border} ${'flex flex-wrap items-center justify-between p-3 bg-gray-900 sm:backdrop-filter sm:backdrop-blur-lg sticky top-0 z-50 transition-all ease-in-out'}`}> { /* backdrop-filter backdrop-blur-lg */ }
+    <nav id="navbar" className={`${border} ${'flex flex-wrap items-center justify-between p-3 bg-gray-900 xsm:bg-opacity-0 sticky top-0 z-50 transition-all ease-in-out'}`}> { /* backdrop-filter backdrop-blur-lg */ }
       <Link id='root-link' href='/'>
         <span className='inline-flex items-center p-2 mr-4'>
           <svg

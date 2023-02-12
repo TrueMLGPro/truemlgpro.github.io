@@ -36,7 +36,7 @@ const Light = () => {
 export default function Home() {
   const ref = useRef();
   const spaceChr = String.fromCharCode("&#x20");
-  const navbarOnTopStyle = "bg-opacity-0";
+  const navbarOnTopStyle = "xsm:bg-opacity-0";
   const navbarBelowTopStyleExtraSmall = "xsm:bg-opacity-80";
   const navbarBelowTopStyleSmall = "sm:bg-opacity-50";
   const navbarBlurFilter = `sm:backdrop-filter${spaceChr}sm:backdrop-blur-lg`;
