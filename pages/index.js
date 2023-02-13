@@ -35,26 +35,28 @@ const Light = () => {
 
 export default function Home() {
   const ref = useRef();
-  const spaceChr = String.fromCharCode("&#x20");
   const navbarOnTopStyle = "xsm:bg-opacity-0";
   const navbarBelowTopStyleExtraSmall = "xsm:bg-opacity-80";
   const navbarBelowTopStyleSmall = "sm:bg-opacity-50";
-  const navbarBlurFilter = `sm:backdrop-filter${spaceChr}sm:backdrop-blur-lg`;
+  const navbarBackdropFilter = "sm:backdrop-filter";
+  const navbarBlur = "sm:backdrop-blur-lg";
   useEffect(() => {
     let navbarElement = document.getElementById("navbar");
     window.onscroll = function(event) {
       "use strict";
-      if (document.body.scrollTop >= 72 || document.documentElement.scrollTop >= 72) {
+      if (document.body.scrollTop >= 72 || document.documentElement.scrollTop >= 72) { // TODO: FIX BLUR FILTER
         // Scrolled below specified coords (72)
         navbarElement.classList.remove(navbarOnTopStyle);
         navbarElement.classList.add(navbarBelowTopStyleExtraSmall);
         navbarElement.classList.add(navbarBelowTopStyleSmall);
-        navbarElement.classList.add(navbarBlurFilter);
+        navbarElement.classList.add(navbarBackdropFilter);
+        navbarElement.classList.add(navbarBlur);
       } else {
         // Page Y position is lower than 72 (near top)
         navbarElement.classList.remove(navbarBelowTopStyleExtraSmall);
         navbarElement.classList.remove(navbarBelowTopStyleSmall);
-        navbarElement.classList.remove(navbarBlurFilter);
+        navbarElement.classList.remove(navbarBackdropFilter);
+        navbarElement.classList.remove(navbarBlur);
         navbarElement.classList.add(navbarOnTopStyle);
       }
     };

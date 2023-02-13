@@ -676,9 +676,6 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
-.bg-opacity-0 {
-  --tw-bg-opacity: 0;
-}
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
@@ -787,6 +784,12 @@ html {
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+.duration-150 {
   transition-duration: 150ms;
 }
 .ease-in-out {
@@ -906,12 +909,12 @@ html {
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
   }
 
-  .xsm\:bg-opacity-80 {
-    --tw-bg-opacity: 0.8;
-  }
-
   .xsm\:bg-opacity-0 {
     --tw-bg-opacity: 0;
+  }
+
+  .xsm\:bg-opacity-80 {
+    --tw-bg-opacity: 0.8;
   }
 
   .xsm\:px-6 {
