@@ -1,4 +1,4 @@
-import { useRef, Suspense, useEffect } from 'react';
+import { useRef, Suspense } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic'
 import { Canvas, AcesFilmicToneMapping } from "@react-three/fiber";
@@ -17,7 +17,7 @@ const Light = () => {
     <>
       <directionalLight
         ref={ref}
-        intensity={0.5}
+        intensity={0.7}
         position={[10, 15, 20]}
         shadow-camera-left={-10}
         shadow-camera-right={10}
@@ -35,32 +35,6 @@ const Light = () => {
 
 export default function Home() {
   const ref = useRef();
-  const navbarOnTopStyle = "xsm:bg-opacity-0";
-  const navbarBelowTopStyleExtraSmall = "xsm:bg-opacity-80";
-  const navbarBelowTopStyleSmall = "sm:bg-opacity-50";
-  const navbarBackdropFilter = "sm:backdrop-filter";
-  const navbarBlur = "sm:backdrop-blur-lg";
-  useEffect(() => {
-    let navbarElement = document.getElementById("navbar");
-    window.onscroll = function(event) {
-      "use strict";
-      if (document.body.scrollTop >= 72 || document.documentElement.scrollTop >= 72) { // TODO: FIX BLUR FILTER
-        // Scrolled below specified coords (72)
-        navbarElement.classList.remove(navbarOnTopStyle);
-        navbarElement.classList.add(navbarBelowTopStyleExtraSmall);
-        navbarElement.classList.add(navbarBelowTopStyleSmall);
-        navbarElement.classList.add(navbarBackdropFilter);
-        navbarElement.classList.add(navbarBlur);
-      } else {
-        // Page Y position is lower than 72 (near top)
-        navbarElement.classList.remove(navbarBelowTopStyleExtraSmall);
-        navbarElement.classList.remove(navbarBelowTopStyleSmall);
-        navbarElement.classList.remove(navbarBackdropFilter);
-        navbarElement.classList.remove(navbarBlur);
-        navbarElement.classList.add(navbarOnTopStyle);
-      }
-    };
-  });
   return (
     <div className='m-0 p-0 bg-gray-900 opacity-90'>
       <Head>
@@ -69,7 +43,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar shouldScrollToTop={true} icon="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+      <Navbar blurFromPx={72} icon="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
         TrueMLGPro
       </Navbar>
 
@@ -88,11 +62,11 @@ export default function Home() {
             <div className="flex mt-12 mb-16 lg:py-12 lg:m-0 lg:justify-end">
               <div className="flex xsm:w-64 xsm:h-64 lg:w-96 lg:h-96 lg:max-w-lg xsm:mx-auto lg:mx-0">
                 <Suspense className="w-full h-full items-center align-middle" fallback={<LoadingSpinner />}>
-                  <Canvas onCreated={state => {state.gl.toneMapping = AcesFilmicToneMapping; state.gl.toneMappingExposure = 2.3}} resize={{debounce: 0}} linear shadows frameloop="demand" dpr={[1, 2]} className="rounded-3xl">
+                  <Canvas onCreated={state => {state.gl.toneMapping = AcesFilmicToneMapping; state.gl.toneMappingExposure = 1.8}} resize={{debounce: 0}} linear shadows frameloop="demand" dpr={[1, 2]} className="rounded-3xl">
                     <Preload all />
                     <Light />
                     <Stage controls={ref} intensity={0.1} shadows={false}>
-                      <PerspectiveCamera makeDefault position={[0, 2, 10]} fov={30} zoom={0.8} />
+                      <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={60} />
                       <DynamicWiFiInfoGLTF />
                     </Stage>
                     <OrbitControls ref={ref} autoRotate autoRotateSpeed={Math.PI / 2} enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
