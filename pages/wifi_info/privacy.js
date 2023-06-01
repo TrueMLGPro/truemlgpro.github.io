@@ -17,18 +17,18 @@ const Privacy = () => {
       </Navbar>
 
       <div className='flex-grow pb-8 xsm:m-8 text-white lg:mx-auto lg:px-8 max-w-7xl'>
-        <HeadingText1 className='mb-4'>
+        <HeadingText1>
           Privacy Policy
         </HeadingText1>
         <p className='text-lg leading-8'>
-          This Privacy Policy governs the manner in which <b>TMP Apps</b> ("we", "us" or "our") collects, uses, maintains, and discloses information collected from
-          users (referred to as "you", "user" or "users") of the <b>Wi-Fi Info</b> application (referred to as the "Application").
+          This Privacy Policy governs the manner in which <b>TMP Apps</b> (&quot;we&quot;, &quot;us&quot; or &quot;our&quot;) collects, uses, maintains, and discloses information collected from
+          users (referred to as &quot;you&quot;, &quot;user&quot; or &quot;users&quot;) of the <b>Wi-Fi Info</b> application (referred to as the &quot;Application&quot;).
         </p>
         <HeadingText2>
           1. Information Collection and Usage
         </HeadingText2>
         <p className='text-lg leading-8'>
-          We <b><u>do not</u></b> collect any personal information or data from the Application's users.
+          We <b><u>do not</u></b> collect any personal information or data from the Application&apos;s users.
           <br/>
           We are committed to respecting your privacy, and we <b><u>do not</u></b> share any user data with third-party services, organizations, or individuals.
         </p>
@@ -36,7 +36,7 @@ const Privacy = () => {
           2. Does the Application collect precise location information of the device?
         </HeadingText2>
         <p className='text-lg leading-8'>
-          The Application <b><u>does not</u></b> collect precise information about the location of user's mobile device.
+          The Application <b><u>does not</u></b> collect precise information about the location of user&apos;s mobile device.
         </p>
         <HeadingText2>
           3. Children
