@@ -7,7 +7,6 @@ import Navbar from '../components/Navbar'
 import LoadingSpinner from '../components/LoadingSpinner';
 import CardView from '../components/CardView';
 import HeadingText1 from '../components/HeadingText1';
-import { sRGBEncoding } from 'three';
 require('default-passive-events');
 
 const DynamicWiFiInfoGLTF = dynamic(() => import('../components/threejs/WiFi_Info_Logo'), { suspense: true });
@@ -63,7 +62,7 @@ export default function Home() {
             <div className="flex mt-12 mb-16 lg:py-12 lg:m-0 lg:justify-end">
               <div className="flex xsm:w-64 xsm:h-64 lg:w-96 lg:h-96 lg:max-w-lg xsm:mx-auto lg:mx-0">
                 <Suspense className="w-full h-full items-center align-middle" fallback={<LoadingSpinner />}>
-                  <Canvas onCreated={state => {state.gl.toneMapping = AcesFilmicToneMapping; state.gl.toneMappingExposure = 1.8; state.gl.outputEncoding = sRGBEncoding}} resize={{debounce: 0}} linear shadows frameloop="demand" dpr={[1, 2]} className="rounded-3xl">
+                  <Canvas onCreated={state => {state.gl.toneMapping = AcesFilmicToneMapping; state.gl.toneMappingExposure = 1.8; state.gl.outputColorSpace = 'srgb-linear'}} resize={{debounce: 0}} linear shadows frameloop="demand" dpr={[1, 2]} className="rounded-3xl">
                     <Preload all />
                     <Light />
                     <Stage controls={ref} intensity={0.1} shadows={false}>

@@ -1,6 +1,6 @@
 {
-  "name": "truemlgpro_portfolio",
-  "version": "1.0.1",
+  "name": "truemlgpro_website",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run build:watch\" \"next dev\"",
@@ -12,21 +12,23 @@
     "prod:build": "NODE_ENV=production npm run build:css && npm run build"
   },
   "dependencies": {
-    "@react-three/drei": "^9.70.3",
+    "@react-three/drei": "^9.70.4",
     "@react-three/fiber": "^8.13.0",
     "autoprefixer": "^10.4.14",
+    "concurrently": "^8.1.0",
     "default-passive-events": "^2.0.0",
     "next": "^13.4.4",
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "request-ip": "^3.3.0",
     "tailwindcss": "^3.3.2",
     "three": "^0.153.0"
   },
   "devDependencies": {
     "cssnano": "^6.0.1",
-    "eslint": "^8.41.0",
+    "eslint": "^8.42.0",
     "eslint-config-next": "^13.4.4"
   }
 }

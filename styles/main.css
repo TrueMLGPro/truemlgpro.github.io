@@ -829,20 +829,25 @@ html {
 ::-webkit-scrollbar-corner {
     background: rgba(0,0,0,0);
   }
+
 .visited\:text-purple-600:visited {
   color: rgb(147 51 234 );
 }
+
 .hover\:bg-gray-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
+
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
+
 .group:hover .group-hover\:underline {
   text-decoration-line: underline;
 }
+
 @media (min-width: 240px) {
 
   .\32xsm\:m-2 {
@@ -864,6 +869,7 @@ html {
     line-height: 1.75rem;
   }
 }
+
 @media (min-width: 360px) {
 
   .xsm\:m-4 {
@@ -959,6 +965,7 @@ html {
     line-height: 1.75rem;
   }
 }
+
 @media (min-width: 480px) {
 
   .sm\:m-4 {
@@ -990,6 +997,7 @@ html {
             backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 }
+
 @media (min-width: 768px) {
 
   .md\:m-6 {
@@ -1047,6 +1055,7 @@ html {
     line-height: 1;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:m-0 {
@@ -1142,6 +1151,7 @@ html {
     line-height: 2.25rem;
   }
 }
+
 @media (min-width: 1280px) {
 
   .xl\:text-xl {
